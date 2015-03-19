@@ -1,0 +1,419 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\programs\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\programs\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'react-router',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink D:\programs\nodejs\\node.exe
+5 warn package.json rainforest-react@1.0.0 No description
+6 warn package.json rainforest-react@1.0.0 No repository field.
+7 warn package.json rainforest-react@1.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'react-router', null ]
+10 verbose cache add name=undefined spec="react-router" args=["react-router",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'react-router',
+11 verbose parsed url   path: 'react-router',
+11 verbose parsed url   href: 'react-router' }
+12 silly lockFile 8307adf9-react-router react-router
+13 verbose lock react-router C:\Users\Julian\AppData\Roaming\npm-cache\8307adf9-react-router.lock
+14 silly lockFile 8307adf9-react-router react-router
+15 silly lockFile 8307adf9-react-router react-router
+16 verbose addNamed [ 'react-router', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile 683905ff-react-router react-router@
+19 verbose lock react-router@ C:\Users\Julian\AppData\Roaming\npm-cache\683905ff-react-router.lock
+20 silly addNameRange { name: 'react-router', range: '*', hasData: false }
+21 verbose request where is /react-router
+22 verbose request registry https://registry.npmjs.org/
+23 verbose request id 470de53c16ead729
+24 verbose url raw /react-router
+25 verbose url resolving [ 'https://registry.npmjs.org/', './react-router' ]
+26 verbose url resolved https://registry.npmjs.org/react-router
+27 verbose request where is https://registry.npmjs.org/react-router
+28 info trying registry request attempt 1 at 16:52:08
+29 http GET https://registry.npmjs.org/react-router
+30 http 200 https://registry.npmjs.org/react-router
+31 silly registry.get cb [ 200,
+31 silly registry.get   { date: 'Wed, 18 Mar 2015 15:52:15 GMT',
+31 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+31 silly registry.get     etag: '"71HKAVSNVE6CYRM384KMHOW9N"',
+31 silly registry.get     'content-type': 'application/json',
+31 silly registry.get     'cache-control': 'max-age=60',
+31 silly registry.get     'content-length': '60262',
+31 silly registry.get     'accept-ranges': 'bytes',
+31 silly registry.get     via: '1.1 varnish',
+31 silly registry.get     age: '0',
+31 silly registry.get     'x-served-by': 'cache-fra1243-FRA',
+31 silly registry.get     'x-cache': 'HIT',
+31 silly registry.get     'x-cache-hits': '1',
+31 silly registry.get     'x-timer': 'S1426693935.404956,VS0,VE176',
+31 silly registry.get     vary: 'Accept',
+31 silly registry.get     'keep-alive': 'timeout=10, max=50',
+31 silly registry.get     connection: 'Keep-Alive' } ]
+32 silly addNameRange number 2 { name: 'react-router', range: '*', hasData: true }
+33 silly addNameRange versions [ 'react-router',
+33 silly addNameRange   [ '0.0.0',
+33 silly addNameRange     '0.0.1',
+33 silly addNameRange     '0.4.0',
+33 silly addNameRange     '0.4.1',
+33 silly addNameRange     '0.4.2',
+33 silly addNameRange     '0.5.0',
+33 silly addNameRange     '0.5.1',
+33 silly addNameRange     '0.5.2',
+33 silly addNameRange     '0.5.3',
+33 silly addNameRange     '0.6.0',
+33 silly addNameRange     '0.6.1',
+33 silly addNameRange     '0.7.0',
+33 silly addNameRange     '0.8.0',
+33 silly addNameRange     '0.9.0',
+33 silly addNameRange     '0.9.1',
+33 silly addNameRange     '0.9.2',
+33 silly addNameRange     '0.9.3',
+33 silly addNameRange     '0.9.4',
+33 silly addNameRange     '0.9.5',
+33 silly addNameRange     '0.10.0',
+33 silly addNameRange     '0.10.1',
+33 silly addNameRange     '0.10.2',
+33 silly addNameRange     '0.11.0',
+33 silly addNameRange     '0.11.1',
+33 silly addNameRange     '0.11.2',
+33 silly addNameRange     '0.11.3',
+33 silly addNameRange     '0.11.4',
+33 silly addNameRange     '0.11.5',
+33 silly addNameRange     '0.11.6',
+33 silly addNameRange     '0.12.0',
+33 silly addNameRange     '0.12.1',
+33 silly addNameRange     '0.12.2',
+33 silly addNameRange     '0.12.3',
+33 silly addNameRange     '0.12.4' ] ]
+34 verbose addNamed [ 'react-router', '0.12.4' ]
+35 verbose addNamed [ '0.12.4', '0.12.4' ]
+36 silly lockFile ed6e4231-react-router-0-12-4 react-router@0.12.4
+37 verbose lock react-router@0.12.4 C:\Users\Julian\AppData\Roaming\npm-cache\ed6e4231-react-router-0-12-4.lock
+38 silly lockFile 6a9228f2-t-router-react-router-0-12-4-tgz https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz
+39 verbose lock https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz C:\Users\Julian\AppData\Roaming\npm-cache\6a9228f2-t-router-react-router-0-12-4-tgz.lock
+40 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz',
+40 verbose addRemoteTarball   'e60798b789729970eea3981799fac4e86bd2fb16' ]
+41 info retry fetch attempt 1 at 16:52:08
+42 verbose fetch to= C:\Users\Julian\AppData\Local\Temp\npm-3828-QexlFXBM\registry.npmjs.org\react-router\-\react-router-0.12.4.tgz
+43 http GET https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz
+44 http 200 https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz
+45 silly lockFile 6a9228f2-t-router-react-router-0-12-4-tgz https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz
+46 silly lockFile 6a9228f2-t-router-react-router-0-12-4-tgz https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz
+47 silly lockFile ed6e4231-react-router-0-12-4 react-router@0.12.4
+48 silly lockFile ed6e4231-react-router-0-12-4 react-router@0.12.4
+49 silly lockFile 683905ff-react-router react-router@
+50 silly lockFile 683905ff-react-router react-router@
+51 silly resolved [ { name: 'react-router',
+51 silly resolved     version: '0.12.4',
+51 silly resolved     description: 'A complete routing library for React.js',
+51 silly resolved     main: 'lib',
+51 silly resolved     repository:
+51 silly resolved      { type: 'git',
+51 silly resolved        url: 'https://github.com/rackt/react-router.git' },
+51 silly resolved     homepage: 'https://github.com/rackt/react-router/blob/latest/README.md',
+51 silly resolved     bugs: { url: 'https://github.com/rackt/react-router/issues' },
+51 silly resolved     authors: [ 'Ryan Florence', 'Michael Jackson' ],
+51 silly resolved     license: 'MIT',
+51 silly resolved     peerDependencies: { react: '0.12.x' },
+51 silly resolved     dependencies: { qs: '2.3.3' },
+51 silly resolved     tags: [ 'react', 'router' ],
+51 silly resolved     keywords:
+51 silly resolved      [ 'react',
+51 silly resolved        'react-component',
+51 silly resolved        'routing',
+51 silly resolved        'route',
+51 silly resolved        'routes',
+51 silly resolved        'router' ],
+51 silly resolved     _id: 'react-router@0.12.4',
+51 silly resolved     scripts: {},
+51 silly resolved     _shasum: 'e60798b789729970eea3981799fac4e86bd2fb16',
+51 silly resolved     _from: 'react-router@',
+51 silly resolved     _resolved: 'https://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz',
+51 silly resolved     _npmVersion: '2.6.0',
+51 silly resolved     _nodeVersion: '0.10.28',
+51 silly resolved     _npmUser: { name: 'mjackson', email: 'mjijackson@gmail.com' },
+51 silly resolved     maintainers: [ [Object], [Object] ],
+51 silly resolved     dist:
+51 silly resolved      { shasum: 'e60798b789729970eea3981799fac4e86bd2fb16',
+51 silly resolved        tarball: 'http://registry.npmjs.org/react-router/-/react-router-0.12.4.tgz' },
+51 silly resolved     directories: {} } ]
+52 info install react-router@0.12.4 into D:\projects\rainforest-react
+53 info installOne react-router@0.12.4
+54 verbose node_modules\react-router unbuild
+55 verbose tar unpack C:\Users\Julian\AppData\Roaming\npm-cache\react-router\0.12.4\package.tgz
+56 silly lockFile 1ee08cd2--react-node-modules-react-router tar://D:\projects\rainforest-react\node_modules\react-router
+57 verbose lock tar://D:\projects\rainforest-react\node_modules\react-router C:\Users\Julian\AppData\Roaming\npm-cache\1ee08cd2--react-node-modules-react-router.lock
+58 silly lockFile 831376b3--react-router-0-12-4-package-tgz tar://C:\Users\Julian\AppData\Roaming\npm-cache\react-router\0.12.4\package.tgz
+59 verbose lock tar://C:\Users\Julian\AppData\Roaming\npm-cache\react-router\0.12.4\package.tgz C:\Users\Julian\AppData\Roaming\npm-cache\831376b3--react-router-0-12-4-package-tgz.lock
+60 silly gunzTarPerm modes [ '777', '666' ]
+61 silly gunzTarPerm extractEntry package.json
+62 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+63 silly gunzTarPerm extractEntry README.md
+64 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+65 silly gunzTarPerm extractEntry lib/Cancellation.js
+66 silly gunzTarPerm modified mode [ 'lib/Cancellation.js', 420, 438 ]
+67 silly gunzTarPerm extractEntry lib/Redirect.js
+68 silly gunzTarPerm modified mode [ 'lib/Redirect.js', 420, 438 ]
+69 silly gunzTarPerm extractEntry lib/Route.js
+70 silly gunzTarPerm modified mode [ 'lib/Route.js', 420, 438 ]
+71 silly gunzTarPerm extractEntry lib/RouteHandlerMixin.js
+72 silly gunzTarPerm modified mode [ 'lib/RouteHandlerMixin.js', 420, 438 ]
+73 silly gunzTarPerm extractEntry lib/PropTypes.js
+74 silly gunzTarPerm modified mode [ 'lib/PropTypes.js', 420, 438 ]
+75 silly gunzTarPerm extractEntry lib/State.js
+76 silly gunzTarPerm modified mode [ 'lib/State.js', 420, 438 ]
+77 silly gunzTarPerm extractEntry lib/Configuration.js
+78 silly gunzTarPerm modified mode [ 'lib/Configuration.js', 420, 438 ]
+79 silly gunzTarPerm extractEntry lib/TestUtils.js
+80 silly gunzTarPerm modified mode [ 'lib/TestUtils.js', 420, 438 ]
+81 silly gunzTarPerm extractEntry lib/Transition.js
+82 silly gunzTarPerm modified mode [ 'lib/Transition.js', 420, 438 ]
+83 silly gunzTarPerm extractEntry lib/runRouter.js
+84 silly gunzTarPerm modified mode [ 'lib/runRouter.js', 420, 438 ]
+85 silly gunzTarPerm extractEntry lib/PathUtils.js
+86 silly gunzTarPerm modified mode [ 'lib/PathUtils.js', 420, 438 ]
+87 silly gunzTarPerm extractEntry lib/isReactChildren.js
+88 silly gunzTarPerm modified mode [ 'lib/isReactChildren.js', 420, 438 ]
+89 silly gunzTarPerm extractEntry lib/NavigationContext.js
+90 silly gunzTarPerm modified mode [ 'lib/NavigationContext.js', 420, 438 ]
+91 silly gunzTarPerm extractEntry lib/index.js
+92 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 438 ]
+93 silly gunzTarPerm extractEntry lib/Navigation.js
+94 silly gunzTarPerm modified mode [ 'lib/Navigation.js', 420, 438 ]
+95 silly gunzTarPerm extractEntry lib/createRouter.js
+96 silly gunzTarPerm modified mode [ 'lib/createRouter.js', 420, 438 ]
+97 silly gunzTarPerm extractEntry lib/Match.js
+98 silly gunzTarPerm modified mode [ 'lib/Match.js', 420, 438 ]
+99 silly gunzTarPerm extractEntry lib/createRoutesFromReactChildren.js
+100 silly gunzTarPerm modified mode [ 'lib/createRoutesFromReactChildren.js', 420, 438 ]
+101 silly gunzTarPerm extractEntry lib/History.js
+102 silly gunzTarPerm modified mode [ 'lib/History.js', 420, 438 ]
+103 silly gunzTarPerm extractEntry lib/getWindowScrollPosition.js
+104 silly gunzTarPerm modified mode [ 'lib/getWindowScrollPosition.js', 420, 438 ]
+105 silly gunzTarPerm extractEntry lib/ScrollHistory.js
+106 silly gunzTarPerm modified mode [ 'lib/ScrollHistory.js', 420, 438 ]
+107 silly gunzTarPerm extractEntry lib/supportsHistory.js
+108 silly gunzTarPerm modified mode [ 'lib/supportsHistory.js', 420, 438 ]
+109 silly gunzTarPerm extractEntry lib/StateContext.js
+110 silly gunzTarPerm modified mode [ 'lib/StateContext.js', 420, 438 ]
+111 silly gunzTarPerm extractEntry lib/components/DefaultRoute.js
+112 silly gunzTarPerm modified mode [ 'lib/components/DefaultRoute.js', 420, 438 ]
+113 silly gunzTarPerm extractEntry lib/components/Link.js
+114 silly gunzTarPerm modified mode [ 'lib/components/Link.js', 420, 438 ]
+115 silly gunzTarPerm extractEntry lib/components/NotFoundRoute.js
+116 silly gunzTarPerm modified mode [ 'lib/components/NotFoundRoute.js', 420, 438 ]
+117 silly gunzTarPerm extractEntry lib/components/Redirect.js
+118 silly gunzTarPerm modified mode [ 'lib/components/Redirect.js', 420, 438 ]
+119 silly gunzTarPerm extractEntry lib/components/Route.js
+120 silly gunzTarPerm modified mode [ 'lib/components/Route.js', 420, 438 ]
+121 silly gunzTarPerm extractEntry lib/components/RouteHandler.js
+122 silly gunzTarPerm modified mode [ 'lib/components/RouteHandler.js', 420, 438 ]
+123 silly gunzTarPerm extractEntry lib/behaviors/ImitateBrowserBehavior.js
+124 silly gunzTarPerm modified mode [ 'lib/behaviors/ImitateBrowserBehavior.js', 420, 438 ]
+125 silly gunzTarPerm extractEntry lib/behaviors/ScrollToTopBehavior.js
+126 silly gunzTarPerm modified mode [ 'lib/behaviors/ScrollToTopBehavior.js', 420, 438 ]
+127 silly gunzTarPerm extractEntry lib/locations/HashLocation.js
+128 silly gunzTarPerm modified mode [ 'lib/locations/HashLocation.js', 420, 438 ]
+129 silly gunzTarPerm extractEntry lib/locations/HistoryLocation.js
+130 silly gunzTarPerm modified mode [ 'lib/locations/HistoryLocation.js', 420, 438 ]
+131 silly gunzTarPerm extractEntry lib/locations/RefreshLocation.js
+132 silly gunzTarPerm modified mode [ 'lib/locations/RefreshLocation.js', 420, 438 ]
+133 silly gunzTarPerm extractEntry lib/locations/StaticLocation.js
+134 silly gunzTarPerm modified mode [ 'lib/locations/StaticLocation.js', 420, 438 ]
+135 silly gunzTarPerm extractEntry lib/locations/TestLocation.js
+136 silly gunzTarPerm modified mode [ 'lib/locations/TestLocation.js', 420, 438 ]
+137 silly gunzTarPerm extractEntry lib/actions/LocationActions.js
+138 silly gunzTarPerm modified mode [ 'lib/actions/LocationActions.js', 420, 438 ]
+139 silly lockFile 1ee08cd2--react-node-modules-react-router tar://D:\projects\rainforest-react\node_modules\react-router
+140 silly lockFile 1ee08cd2--react-node-modules-react-router tar://D:\projects\rainforest-react\node_modules\react-router
+141 silly lockFile 831376b3--react-router-0-12-4-package-tgz tar://C:\Users\Julian\AppData\Roaming\npm-cache\react-router\0.12.4\package.tgz
+142 silly lockFile 831376b3--react-router-0-12-4-package-tgz tar://C:\Users\Julian\AppData\Roaming\npm-cache\react-router\0.12.4\package.tgz
+143 info preinstall react-router@0.12.4
+144 verbose readDependencies using package.json deps
+145 verbose readDependencies using package.json deps
+146 verbose cache add [ 'qs@2.3.3', null ]
+147 verbose cache add name=undefined spec="qs@2.3.3" args=["qs@2.3.3",null]
+148 verbose parsed url { protocol: null,
+148 verbose parsed url   slashes: null,
+148 verbose parsed url   auth: null,
+148 verbose parsed url   host: null,
+148 verbose parsed url   port: null,
+148 verbose parsed url   hostname: null,
+148 verbose parsed url   hash: null,
+148 verbose parsed url   search: null,
+148 verbose parsed url   query: null,
+148 verbose parsed url   pathname: 'qs@2.3.3',
+148 verbose parsed url   path: 'qs@2.3.3',
+148 verbose parsed url   href: 'qs@2.3.3' }
+149 verbose cache add name="qs" spec="2.3.3" args=["qs","2.3.3"]
+150 verbose parsed url { protocol: null,
+150 verbose parsed url   slashes: null,
+150 verbose parsed url   auth: null,
+150 verbose parsed url   host: null,
+150 verbose parsed url   port: null,
+150 verbose parsed url   hostname: null,
+150 verbose parsed url   hash: null,
+150 verbose parsed url   search: null,
+150 verbose parsed url   query: null,
+150 verbose parsed url   pathname: '2.3.3',
+150 verbose parsed url   path: '2.3.3',
+150 verbose parsed url   href: '2.3.3' }
+151 verbose addNamed [ 'qs', '2.3.3' ]
+152 verbose addNamed [ '2.3.3', '2.3.3' ]
+153 silly lockFile 91f8f145-qs-2-3-3 qs@2.3.3
+154 verbose lock qs@2.3.3 C:\Users\Julian\AppData\Roaming\npm-cache\91f8f145-qs-2-3-3.lock
+155 verbose request where is /qs
+156 verbose request registry https://registry.npmjs.org/
+157 verbose url raw /qs
+158 verbose url resolving [ 'https://registry.npmjs.org/', './qs' ]
+159 verbose url resolved https://registry.npmjs.org/qs
+160 verbose request where is https://registry.npmjs.org/qs
+161 info trying registry request attempt 1 at 16:52:08
+162 verbose etag "BQ7Z620Y133X38HBO8OVC3NQE"
+163 http GET https://registry.npmjs.org/qs
+164 http 304 https://registry.npmjs.org/qs
+165 silly registry.get cb [ 304,
+165 silly registry.get   { date: 'Wed, 18 Mar 2015 15:52:16 GMT',
+165 silly registry.get     server: 'Apache',
+165 silly registry.get     via: '1.1 varnish',
+165 silly registry.get     'last-modified': 'Wed, 18 Mar 2015 15:51:56 GMT',
+165 silly registry.get     'cache-control': 'max-age=60',
+165 silly registry.get     etag: '"BQ7Z620Y133X38HBO8OVC3NQE"',
+165 silly registry.get     age: '23',
+165 silly registry.get     'x-served-by': 'cache-fra1236-FRA',
+165 silly registry.get     'x-cache': 'HIT',
+165 silly registry.get     'x-cache-hits': '2',
+165 silly registry.get     'x-timer': 'S1426693936.212805,VS0,VE0',
+165 silly registry.get     vary: 'Accept',
+165 silly registry.get     'content-length': '0',
+165 silly registry.get     'keep-alive': 'timeout=10, max=50',
+165 silly registry.get     connection: 'Keep-Alive' } ]
+166 verbose etag https://registry.npmjs.org/qs from cache
+167 silly lockFile 91f8f145-qs-2-3-3 qs@2.3.3
+168 silly lockFile 91f8f145-qs-2-3-3 qs@2.3.3
+169 silly resolved [ { name: 'qs',
+169 silly resolved     version: '2.3.3',
+169 silly resolved     description: 'A querystring parser that supports nesting and arrays, with a depth limit',
+169 silly resolved     homepage: 'https://github.com/hapijs/qs',
+169 silly resolved     main: 'index.js',
+169 silly resolved     dependencies: {},
+169 silly resolved     devDependencies: { code: '1.x.x', lab: '5.x.x' },
+169 silly resolved     scripts: { test: 'make test-cov' },
+169 silly resolved     repository: { type: 'git', url: 'https://github.com/hapijs/qs.git' },
+169 silly resolved     keywords: [ 'querystring', 'qs' ],
+169 silly resolved     licenses: [ [Object] ],
+169 silly resolved     gitHead: '9250c4cda5102fcf72441445816e6d311fc6813d',
+169 silly resolved     bugs: { url: 'https://github.com/hapijs/qs/issues' },
+169 silly resolved     _id: 'qs@2.3.3',
+169 silly resolved     _shasum: 'e9e85adbe75da0bbe4c8e0476a086290f863b404',
+169 silly resolved     _from: 'qs@2.3.3',
+169 silly resolved     _npmVersion: '2.1.6',
+169 silly resolved     _nodeVersion: '0.10.32',
+169 silly resolved     _npmUser: { name: 'nlf', email: 'quitlahok@gmail.com' },
+169 silly resolved     maintainers: [ [Object], [Object] ],
+169 silly resolved     dist:
+169 silly resolved      { shasum: 'e9e85adbe75da0bbe4c8e0476a086290f863b404',
+169 silly resolved        tarball: 'http://registry.npmjs.org/qs/-/qs-2.3.3.tgz' },
+169 silly resolved     directories: {},
+169 silly resolved     _resolved: 'https://registry.npmjs.org/qs/-/qs-2.3.3.tgz',
+169 silly resolved     readme: 'ERROR: No README data found!' } ]
+170 info install qs@2.3.3 into D:\projects\rainforest-react\node_modules\react-router
+171 info installOne qs@2.3.3
+172 verbose node_modules\react-router\node_modules\qs unbuild
+173 verbose tar unpack C:\Users\Julian\AppData\Roaming\npm-cache\qs\2.3.3\package.tgz
+174 silly lockFile e59749c2-les-react-router-node-modules-qs tar://D:\projects\rainforest-react\node_modules\react-router\node_modules\qs
+175 verbose lock tar://D:\projects\rainforest-react\node_modules\react-router\node_modules\qs C:\Users\Julian\AppData\Roaming\npm-cache\e59749c2-les-react-router-node-modules-qs.lock
+176 silly lockFile 44a1314f-g-npm-cache-qs-2-3-3-package-tgz tar://C:\Users\Julian\AppData\Roaming\npm-cache\qs\2.3.3\package.tgz
+177 verbose lock tar://C:\Users\Julian\AppData\Roaming\npm-cache\qs\2.3.3\package.tgz C:\Users\Julian\AppData\Roaming\npm-cache\44a1314f-g-npm-cache-qs-2-3-3-package-tgz.lock
+178 silly gunzTarPerm modes [ '777', '666' ]
+179 silly gunzTarPerm extractEntry package.json
+180 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+181 silly gunzTarPerm extractEntry .npmignore
+182 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+183 silly gunzTarPerm extractEntry README.md
+184 silly gunzTarPerm modified mode [ 'README.md', 493, 511 ]
+185 silly gunzTarPerm extractEntry LICENSE
+186 silly gunzTarPerm modified mode [ 'LICENSE', 493, 511 ]
+187 silly gunzTarPerm extractEntry index.js
+188 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+189 silly gunzTarPerm extractEntry CHANGELOG.md
+190 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
+191 silly gunzTarPerm extractEntry CONTRIBUTING.md
+192 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 420, 438 ]
+193 silly gunzTarPerm extractEntry Makefile
+194 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+195 silly gunzTarPerm extractEntry .jshintignore
+196 silly gunzTarPerm modified mode [ '.jshintignore', 420, 438 ]
+197 silly gunzTarPerm extractEntry .jshintrc
+198 silly gunzTarPerm modified mode [ '.jshintrc', 420, 438 ]
+199 silly gunzTarPerm extractEntry lib/index.js
+200 silly gunzTarPerm modified mode [ 'lib/index.js', 493, 511 ]
+201 silly gunzTarPerm extractEntry lib/parse.js
+202 silly gunzTarPerm modified mode [ 'lib/parse.js', 493, 511 ]
+203 silly gunzTarPerm extractEntry lib/stringify.js
+204 silly gunzTarPerm modified mode [ 'lib/stringify.js', 493, 511 ]
+205 silly gunzTarPerm extractEntry lib/utils.js
+206 silly gunzTarPerm modified mode [ 'lib/utils.js', 493, 511 ]
+207 silly gunzTarPerm extractEntry .travis.yml
+208 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+209 silly gunzTarPerm extractEntry test/parse.js
+210 silly gunzTarPerm modified mode [ 'test/parse.js', 493, 511 ]
+211 silly gunzTarPerm extractEntry test/stringify.js
+212 silly gunzTarPerm modified mode [ 'test/stringify.js', 493, 511 ]
+213 silly lockFile e59749c2-les-react-router-node-modules-qs tar://D:\projects\rainforest-react\node_modules\react-router\node_modules\qs
+214 silly lockFile e59749c2-les-react-router-node-modules-qs tar://D:\projects\rainforest-react\node_modules\react-router\node_modules\qs
+215 silly lockFile 44a1314f-g-npm-cache-qs-2-3-3-package-tgz tar://C:\Users\Julian\AppData\Roaming\npm-cache\qs\2.3.3\package.tgz
+216 silly lockFile 44a1314f-g-npm-cache-qs-2-3-3-package-tgz tar://C:\Users\Julian\AppData\Roaming\npm-cache\qs\2.3.3\package.tgz
+217 info preinstall qs@2.3.3
+218 verbose readDependencies using package.json deps
+219 verbose readDependencies using package.json deps
+220 silly resolved []
+221 verbose about to build D:\projects\rainforest-react\node_modules\react-router\node_modules\qs
+222 info build D:\projects\rainforest-react\node_modules\react-router\node_modules\qs
+223 verbose linkStuff [ false,
+223 verbose linkStuff   false,
+223 verbose linkStuff   false,
+223 verbose linkStuff   'D:\\projects\\rainforest-react\\node_modules\\react-router\\node_modules' ]
+224 info linkStuff qs@2.3.3
+225 verbose linkBins qs@2.3.3
+226 verbose linkMans qs@2.3.3
+227 verbose rebuildBundles qs@2.3.3
+228 info install qs@2.3.3
+229 info postinstall qs@2.3.3
+230 verbose about to build D:\projects\rainforest-react\node_modules\react-router
+231 info build D:\projects\rainforest-react\node_modules\react-router
+232 verbose linkStuff [ false,
+232 verbose linkStuff   false,
+232 verbose linkStuff   false,
+232 verbose linkStuff   'D:\\projects\\rainforest-react\\node_modules' ]
+233 info linkStuff react-router@0.12.4
+234 verbose linkBins react-router@0.12.4
+235 verbose linkMans react-router@0.12.4
+236 verbose rebuildBundles react-router@0.12.4
+237 verbose rebuildBundles [ 'qs' ]
+238 info install react-router@0.12.4
+239 info postinstall react-router@0.12.4
+240 verbose readDependencies using package.json deps
+241 verbose already installed skipping react@0.12.x D:\projects\rainforest-react
+242 silly resolved []
+243 error peerinvalid The package react does not satisfy its siblings' peerDependencies requirements!
+243 error peerinvalid Peer react-router@0.12.4 wants react@0.12.x
+244 error System Windows_NT 6.2.9200
+245 error command "D:\\programs\\nodejs\\\\node.exe" "D:\\programs\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "react-router" "--save"
+246 error cwd D:\projects\rainforest-react
+247 error node -v v0.10.33
+248 error npm -v 1.4.28
+249 error code EPEERINVALID
+250 verbose exit [ 1, true ]
