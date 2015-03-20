@@ -5,6 +5,7 @@ var RoutePattern = require('route-pattern');
 require('babel/polyfill');
 
 var HashChangeAction = Reflux.createAction();
+var RequestHashAction = Reflux.createAction();
 
 class Router {
   constructor() {
@@ -13,25 +14,48 @@ class Router {
   }
 
   route(){
-    var hash = window.location.hash.substr(1);
+    var hash = this.getHash();
+    
     var urlIsClean = this.urlIsClean(hash);
 
     if(!urlIsClean && this.lastHash !== hash){
-      this.cleanUrl(hash)
+      this.cleanUrl(hash);
     }else if(hash !== this.lastHash && this.running === true && urlIsClean){
       this.lastHash = hash;
       this.dispatchRoute(hash);
     }
   }
 
-  dispatchRoute(hash){
-    console.log(this.patterns);
-    var foundIndex = this.patterns.findIndex( pat => pat.routePattern.matches(hash) );
-    if(foundIndex > -1){
-      HashChangeAction(this.patterns[foundIndex].patternString, this.patterns[foundIndex].routePattern.match());
-    }else{
-      this.route('/');
+  getFragmentPatterns(hash){
+    if(hash === undefined){
+      hash = this.getHash();
     }
+    var fragments = hash.split('/').filter(x => x.trim().length > 0).map(string => '/' + string);
+    var fragmentPatterns = {};
+    var pattern = '';
+
+    fragments.forEach((fragment)=>{
+      pattern+=fragment;
+      var foundIndex = this.patterns.findIndex( pat => pat.routePattern.matches(pattern) );
+
+      if(foundIndex > -1){
+        fragmentPatterns[this.patterns[foundIndex].patternString] = this.patterns[foundIndex].routePattern.match(pattern);
+        this.lastMatchedPattern = pattern;
+      }
+    });
+    return fragmentPatterns;
+  }
+
+  getHash(){
+    return window.location.hash.substr(1);
+  }
+
+  dispatchRoute(hash){
+    HashChangeAction(this.getFragmentPatterns(hash));
+    setTimeout(()=>{
+      console.log('last matched pattern', this.lastMatchedPattern);
+      this.redirect(this.lastMatchedPattern);
+    }, 1);
   }
 
   urlIsClean(fragment) {
@@ -44,6 +68,7 @@ class Router {
   }
 
   cleanUrl(fragment) {
+    console.log('fragment', fragment);
     if(fragment[0] !== '/'){
       fragment = '/' + fragment;
     }else if(fragment.length > 1 && fragment[fragment.length-1] === '/'){
@@ -76,8 +101,8 @@ class Router {
     }
   }
 
-  redirect(fragment){
-    window.location.hash = fragment;
+  redirect(hash){
+    window.location.hash = hash;
   }
 
   run(){
@@ -94,8 +119,11 @@ var router = new Router();
 
 var RouteStore = Reflux.createStore({
   init: function(){
-    this.listenTo(HashChangeAction, () => {
-      this.trigger.apply(this, arguments);
+    this.listenTo(HashChangeAction, (fragmentPatterns) => {
+      this.trigger.call(this, fragmentPatterns);
+    });
+    this.listenTo(RequestHashAction, ()=> {
+      this.trigger.call(this, router.getFragmentPatterns());
     });
   }
 });
@@ -103,24 +131,60 @@ var RouteStore = Reflux.createStore({
 var Route = React.createClass({
   getInitialState: function(){
     return {
-      routeMatches: false
-    };
+      routeMatches: false,
+      params: []
+    }
   },
-  onRouteChange: function(hash){
-    console.log('args', arguments);
-    //    var matches = this.routePattern.match(hash);
-    //    var doesMatch = this.routePattern.matches(hash);
-    //    console.log('matches', matches);
-    //    console.log('doesMatch', doesMatch);
-    //    this.setState({routeMatches: this.routePattern.match(hash)});
+
+  getState: function(fragments){
+    if(fragments === undefined){
+      fragments = router.getFragmentPatterns();
+    }
+
+    var fragmentParams = fragments[this.props.pattern];
+
+    var result = {};
+    if(fragmentParams){
+      result.routeMatches = true;
+      result.params = fragmentParams;
+    }else{
+      result.routeMatches = false;
+      result.params = {};
+    }
+    console.log(result);
+    return result;
   },
+
+  onRouteChange: function(fragmentPatterns){
+    this.setState(this.getState(fragmentPatterns));
+  },
+
   componentDidMount: function(){
-    this.routePattern = RoutePattern.fromString(this.props.pattern);
+    this.inheritPatternProps();
+    router.register(this.props.pattern);
     this.unsubscribe = RouteStore.listen(this.onRouteChange);
+    this.setState(this.getState());
   },
+
+  inheritPatternProps: function(){
+    var children = this.props.children
+    if(children !== undefined){
+      if(typeof children.forEach !== 'function'){
+        children = [children];
+      }
+      children.forEach((child)=>{
+        if(child.type.displayName === 'Route'){
+          child.props.pattern = this.props.pattern + child.props.pattern;
+        }
+      });
+    }
+  },
+
   componentWillUnMount: function(){
+    router.unregister(this.props.pattern);
     this.unsubscribe();
   },
+
   render: function(){
     if(this.state.routeMatches){
       return <div> {this.props.children} </div>;
@@ -133,4 +197,4 @@ var Route = React.createClass({
 module.exports = {
   Router: router,
   Route: Route
-}
+};
