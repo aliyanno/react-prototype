@@ -7,8 +7,35 @@ require('babel/polyfill');
 var HashChangeAction = Reflux.createAction();
 var RequestHashAction = Reflux.createAction();
 
+var CascadeMixin = {
+  cascadePatternProps: function(){
+    var children = this.props.children
+    if(this._currentElement.type.displayName === 'Tests'){
+      console.log('children', this);
+    }
+    if(children !== undefined){
+      if(typeof children.forEach !== 'function'){
+        children = [children];
+      }
+      children.filter(x => x.props !== undefined).forEach((child)=>{
+        var childPattern = child.props.pattern || '';
+        child.props.pattern = this.props.pattern + childPattern;
+      });
+    }
+  },
+  componentDidMount: function(){
+    console.log('cascadePatternProps', this._currentElement.type.displayName);
+    this.cascadePatternProps();
+  }
+};
+
+var defaultConfig = {
+  defaultRoute: '/'
+};
+
 class Router {
-  constructor() {
+  constructor(config = defaultConfig) {
+    this.config = config;
     window.addEventListener('hashchange', this.route.bind(this));
     this.patterns = [];
   }
@@ -46,16 +73,22 @@ class Router {
     return fragmentPatterns;
   }
 
+  getFragmentParams(patternString){
+    var patterns = this.getFragmentPatterns();
+    return patterns[patternString];
+  }
+
   getHash(){
     return window.location.hash.substr(1);
   }
 
   dispatchRoute(hash){
     HashChangeAction(this.getFragmentPatterns(hash));
-    setTimeout(()=>{
-      console.log('last matched pattern', this.lastMatchedPattern);
-      this.redirect(this.lastMatchedPattern);
-    }, 1);
+    setTimeout(this.defaultRedirect.bind(this), 1);
+  }
+
+  defaultRedirect(){
+    this.redirect(this.lastMatchedPattern || this.config.defaultRoute);
   }
 
   urlIsClean(fragment) {
@@ -68,7 +101,6 @@ class Router {
   }
 
   cleanUrl(fragment) {
-    console.log('fragment', fragment);
     if(fragment[0] !== '/'){
       fragment = '/' + fragment;
     }else if(fragment.length > 1 && fragment[fragment.length-1] === '/'){
@@ -102,7 +134,9 @@ class Router {
   }
 
   redirect(hash){
-    window.location.hash = hash;
+    if(hash !== this.getHash()){
+      window.location.hash = hash;
+    }
   }
 
   run(){
@@ -115,7 +149,7 @@ class Router {
   }
 }
 
-var router = new Router();
+var router = new Router({defaultRoute: '/tests'});
 
 var RouteStore = Reflux.createStore({
   init: function(){
@@ -129,6 +163,7 @@ var RouteStore = Reflux.createStore({
 });
 
 var Route = React.createClass({
+  mixins: [CascadeMixin],
   getInitialState: function(){
     return {
       routeMatches: false,
@@ -151,7 +186,6 @@ var Route = React.createClass({
       result.routeMatches = false;
       result.params = {};
     }
-    console.log(result);
     return result;
   },
 
@@ -160,24 +194,9 @@ var Route = React.createClass({
   },
 
   componentDidMount: function(){
-    this.inheritPatternProps();
     router.register(this.props.pattern);
     this.unsubscribe = RouteStore.listen(this.onRouteChange);
     this.setState(this.getState());
-  },
-
-  inheritPatternProps: function(){
-    var children = this.props.children
-    if(children !== undefined){
-      if(typeof children.forEach !== 'function'){
-        children = [children];
-      }
-      children.forEach((child)=>{
-        if(child.type.displayName === 'Route'){
-          child.props.pattern = this.props.pattern + child.props.pattern;
-        }
-      });
-    }
   },
 
   componentWillUnMount: function(){
@@ -196,5 +215,7 @@ var Route = React.createClass({
 
 module.exports = {
   Router: router,
-  Route: Route
+  Route: Route,
+  CascadeMixin: CascadeMixin,
+  RouteStore: RouteStore
 };
